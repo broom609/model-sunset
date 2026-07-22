@@ -39,14 +39,14 @@ ModelSunset provides:
 Install the CLI directly from the versioned GitHub release line:
 
 ```bash
-npm install --global github:broom609/model-sunset#v1
+npm install --global https://github.com/broom609/model-sunset/releases/download/v1.0.0/model-sunset-1.0.0.tgz
 modelsunset scan .
 ```
 
 Or keep it project-local:
 
 ```bash
-npm install --save-dev github:broom609/model-sunset#v1
+npm install --save-dev https://github.com/broom609/model-sunset/releases/download/v1.0.0/model-sunset-1.0.0.tgz
 npx modelsunset scan .
 ```
 
