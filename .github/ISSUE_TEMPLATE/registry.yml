@@ -1,0 +1,39 @@
+name: Registry correction
+description: Add or correct a provider lifecycle entry.
+title: "[Registry]: "
+labels: [registry]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Exact model ID
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official provider source
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: shutdown
+    attributes:
+      label: Shutdown date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Provider-recommended replacement
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

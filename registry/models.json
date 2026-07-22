@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-22",
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "source": "https://developers.openai.com/api/docs/deprecations"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    "google": {
+      "name": "Google Gemini API",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations"
+    }
+  },
+  "models": [
+    {
+      "id": "computer-use-preview-2025-03-11",
+      "aliases": ["computer-use-preview"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "gpt-4o-mini-search-preview-2025-03-11",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "gpt-4o-search-preview-2025-03-11",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "gpt-5-chat-latest",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-5-codex",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-5.1-chat-latest",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-5.1-codex",
+      "aliases": ["gpt-5.1-codex-max"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-5.1-codex-mini",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "o3-deep-research-2025-06-26",
+      "aliases": ["o3-deep-research"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.5-pro"
+    },
+    {
+      "id": "o4-mini-deep-research-2025-06-26",
+      "aliases": ["o4-mini-deep-research"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-07-23",
+      "replacement": "gpt-5.5-pro"
+    },
+    {
+      "id": "gpt-5.2-chat-latest",
+      "aliases": ["gpt-5.3-chat-latest"],
+      "provider": "openai",
+      "deprecatedAt": "2026-05-08",
+      "shutdownAt": "2026-08-10",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-image-1-mini",
+      "aliases": ["gpt-image-1.5", "chatgpt-image-latest"],
+      "provider": "openai",
+      "deprecatedAt": "2026-06-02",
+      "shutdownAt": "2026-12-01",
+      "replacement": "gpt-image-2"
+    },
+    {
+      "id": "gpt-5-2025-08-07",
+      "aliases": ["o3-2025-04-16"],
+      "provider": "openai",
+      "deprecatedAt": "2026-06-11",
+      "shutdownAt": "2026-12-11",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-5-mini-2025-08-07",
+      "provider": "openai",
+      "deprecatedAt": "2026-06-11",
+      "shutdownAt": "2026-12-11",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "gpt-5-nano-2025-08-07",
+      "provider": "openai",
+      "deprecatedAt": "2026-06-11",
+      "shutdownAt": "2026-12-11",
+      "replacement": "gpt-5.4-nano"
+    },
+    {
+      "id": "gpt-5-pro-2025-10-06",
+      "aliases": ["o3-pro-2025-06-10"],
+      "provider": "openai",
+      "deprecatedAt": "2026-06-11",
+      "shutdownAt": "2026-12-11",
+      "replacement": "gpt-5.5-pro"
+    },
+    {
+      "id": "gpt-realtime",
+      "aliases": ["gpt-4o-realtime"],
+      "provider": "openai",
+      "deprecatedAt": "2026-07-20",
+      "shutdownAt": "2027-01-20",
+      "replacement": "gpt-realtime-2.1"
+    },
+    {
+      "id": "gpt-audio",
+      "aliases": ["gpt-4o-audio", "gpt-audio-mini"],
+      "provider": "openai",
+      "deprecatedAt": "2026-07-20",
+      "shutdownAt": "2027-01-20",
+      "replacement": "gpt-audio-1.5"
+    },
+    {
+      "id": "gpt-realtime-mini",
+      "aliases": ["gpt-4o-mini-realtime"],
+      "provider": "openai",
+      "deprecatedAt": "2026-07-20",
+      "shutdownAt": "2027-01-20",
+      "replacement": "gpt-realtime-2.1-mini"
+    },
+    {
+      "id": "gpt-3.5-turbo-0125",
+      "aliases": ["gpt-3.5-turbo", "gpt-3.5-turbo-completions"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "gpt-4-0613",
+      "aliases": ["gpt-4", "gpt-4-0613-completions", "gpt-4-completions"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-4-turbo-2024-04-09",
+      "aliases": ["gpt-4-turbo", "gpt-4-turbo-completions"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-4.1-nano-2025-04-14",
+      "aliases": ["gpt-4.1-nano"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.4-nano"
+    },
+    {
+      "id": "gpt-4o-2024-05-13",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "gpt-image-1",
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-image-2"
+    },
+    {
+      "id": "o1-2024-12-17",
+      "aliases": ["o1"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "o3-mini-2025-01-31",
+      "aliases": ["o3-mini"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.5"
+    },
+    {
+      "id": "o4-mini-2025-04-16",
+      "aliases": ["o4-mini"],
+      "provider": "openai",
+      "deprecatedAt": "2026-04-22",
+      "shutdownAt": "2026-10-23",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "gpt-3.5-turbo-instruct",
+      "aliases": ["babbage-002", "davinci-002", "gpt-3.5-turbo-1106"],
+      "provider": "openai",
+      "deprecatedAt": "2025-09-26",
+      "shutdownAt": "2026-09-28",
+      "replacement": "gpt-5.4-mini"
+    },
+    {
+      "id": "sora-2",
+      "aliases": ["sora-2-pro", "sora-2-2025-10-06", "sora-2-2025-12-08", "sora-2-pro-2025-10-06"],
+      "provider": "openai",
+      "deprecatedAt": "2026-03-24",
+      "shutdownAt": "2026-09-24",
+      "note": "No direct replacement is listed by the provider."
+    },
+    {
+      "id": "claude-mythos-preview",
+      "provider": "anthropic",
+      "deprecatedAt": "2026-07-01",
+      "shutdownAt": "2026-07-21",
+      "replacement": "claude-mythos-5"
+    },
+    {
+      "id": "claude-opus-4-1-20250805",
+      "provider": "anthropic",
+      "deprecatedAt": "2026-06-05",
+      "shutdownAt": "2026-08-05",
+      "replacement": "claude-opus-4-8"
+    },
+    {
+      "id": "claude-opus-4-20250514",
+      "provider": "anthropic",
+      "deprecatedAt": "2026-04-14",
+      "shutdownAt": "2026-06-15",
+      "replacement": "claude-opus-4-8"
+    },
+    {
+      "id": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "deprecatedAt": "2026-04-14",
+      "shutdownAt": "2026-06-15",
+      "replacement": "claude-sonnet-4-6"
+    },
+    {
+      "id": "claude-3-7-sonnet-20250219",
+      "provider": "anthropic",
+      "deprecatedAt": "2025-10-28",
+      "shutdownAt": "2026-02-19",
+      "replacement": "claude-sonnet-4-6"
+    },
+    {
+      "id": "claude-3-5-haiku-20241022",
+      "provider": "anthropic",
+      "deprecatedAt": "2025-12-19",
+      "shutdownAt": "2026-02-19",
+      "replacement": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "claude-3-haiku-20240307",
+      "provider": "anthropic",
+      "deprecatedAt": "2026-02-19",
+      "shutdownAt": "2026-04-20",
+      "replacement": "claude-haiku-4-5-20251001"
+    },
+    {
+      "id": "claude-3-5-sonnet-20240620",
+      "aliases": ["claude-3-5-sonnet-20241022"],
+      "provider": "anthropic",
+      "deprecatedAt": "2025-08-13",
+      "shutdownAt": "2025-10-28",
+      "replacement": "claude-sonnet-4-6"
+    },
+    {
+      "id": "claude-3-opus-20240229",
+      "provider": "anthropic",
+      "deprecatedAt": "2025-06-30",
+      "shutdownAt": "2026-01-05",
+      "replacement": "claude-opus-4-8"
+    },
+    {
+      "id": "claude-2.0",
+      "aliases": ["claude-2.1"],
+      "provider": "anthropic",
+      "deprecatedAt": "2025-01-21",
+      "shutdownAt": "2025-07-21",
+      "replacement": "claude-opus-4-8"
+    },
+    {
+      "id": "claude-3-sonnet-20240229",
+      "provider": "anthropic",
+      "deprecatedAt": "2025-01-21",
+      "shutdownAt": "2025-07-21",
+      "replacement": "claude-sonnet-4-6"
+    },
+    {
+      "id": "gemini-3.1-flash-lite",
+      "provider": "google",
+      "shutdownAt": "2027-05-07",
+      "replacement": "gemini-3.5-flash-lite",
+      "note": "Google lists this as the earliest possible shutdown date."
+    },
+    {
+      "id": "gemini-3.1-flash-image-preview",
+      "provider": "google",
+      "shutdownAt": "2026-06-25",
+      "replacement": "gemini-3.1-flash-image"
+    },
+    {
+      "id": "gemini-3-pro-image-preview",
+      "provider": "google",
+      "shutdownAt": "2026-06-25",
+      "replacement": "gemini-3-pro-image"
+    },
+    {
+      "id": "gemini-3-pro-preview",
+      "provider": "google",
+      "shutdownAt": "2026-03-09",
+      "replacement": "gemini-3.1-pro-preview"
+    },
+    {
+      "id": "gemini-3.1-flash-lite-preview",
+      "provider": "google",
+      "shutdownAt": "2026-05-25",
+      "replacement": "gemini-3.1-flash-lite"
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "provider": "google",
+      "shutdownAt": "2026-10-16",
+      "replacement": "gemini-3.1-pro-preview",
+      "note": "Google lists this as the earliest possible shutdown date."
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "provider": "google",
+      "shutdownAt": "2026-10-16",
+      "replacement": "gemini-3.6-flash",
+      "note": "Google lists this as the earliest possible shutdown date."
+    },
+    {
+      "id": "gemini-2.5-flash-image",
+      "provider": "google",
+      "shutdownAt": "2026-10-02",
+      "replacement": "gemini-3.1-flash-image-preview",
+      "note": "Google lists this as the earliest possible shutdown date."
+    },
+    {
+      "id": "gemini-2.5-flash-lite",
+      "provider": "google",
+      "shutdownAt": "2026-10-16",
+      "replacement": "gemini-3.1-flash-lite",
+      "note": "Google lists this as the earliest possible shutdown date."
+    },
+    {
+      "id": "gemini-2.0-flash",
+      "aliases": ["gemini-2.0-flash-001"],
+      "provider": "google",
+      "shutdownAt": "2026-06-01",
+      "replacement": "gemini-3.6-flash"
+    },
+    {
+      "id": "gemini-2.0-flash-lite",
+      "aliases": ["gemini-2.0-flash-lite-001"],
+      "provider": "google",
+      "shutdownAt": "2026-06-01",
+      "replacement": "gemini-3.1-flash-lite"
+    },
+    {
+      "id": "gemini-embedding-001",
+      "provider": "google",
+      "shutdownAt": "2026-07-14",
+      "replacement": "gemini-embedding-2"
+    },
+    {
+      "id": "embedding-2-preview",
+      "provider": "google",
+      "shutdownAt": "2026-08-10",
+      "replacement": "gemini-embedding-2"
+    },
+    {
+      "id": "text-embedding-004",
+      "provider": "google",
+      "shutdownAt": "2026-01-14",
+      "replacement": "gemini-embedding-2"
+    },
+    {
+      "id": "imagen-4.0-generate-001",
+      "provider": "google",
+      "shutdownAt": "2026-08-17",
+      "replacement": "gemini-3.1-flash-image"
+    },
+    {
+      "id": "imagen-4.0-ultra-generate-001",
+      "provider": "google",
+      "shutdownAt": "2026-08-17",
+      "replacement": "gemini-3.1-flash-image"
+    },
+    {
+      "id": "imagen-4.0-fast-generate-001",
+      "provider": "google",
+      "shutdownAt": "2026-08-17",
+      "replacement": "gemini-3.1-flash-image"
+    },
+    {
+      "id": "gemini-robotics-er-1.5-preview",
+      "provider": "google",
+      "shutdownAt": "2026-04-30",
+      "replacement": "gemini-robotics-er-1.6-preview"
+    }
+  ]
+}

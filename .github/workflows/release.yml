@@ -1,0 +1,26 @@
+name: Release artifact
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm pack
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-sunset-${{ github.ref_name }}
+          path: model-sunset-*.tgz
+          if-no-files-found: error

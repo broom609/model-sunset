@@ -1,0 +1,31 @@
+name: Registry freshness
+
+on:
+  schedule:
+    - cron: '23 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: registry
+        continue-on-error: true
+        run: node scripts/check-registry-age.mjs 45
+      - name: Open one maintenance issue when stale
+        if: steps.registry.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! gh issue list --state open --label registry --search 'Registry refresh required in:title' --json number --jq 'length' | grep -q '^1$'; then
+            gh issue create \
+              --title 'Registry refresh required' \
+              --label registry \
+              --body 'The bundled lifecycle registry is older than 45 days. Re-check every provider source linked in registry/models.json, update entries and updatedAt, then run npm run check.'
+          fi
+          exit 1

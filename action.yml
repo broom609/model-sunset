@@ -1,0 +1,52 @@
+name: ModelSunset
+description: Find deprecated AI models and optionally open a safe migration pull request.
+author: Steven Broomall
+branding:
+  icon: sunset
+  color: orange
+inputs:
+  path:
+    description: Repository path to scan.
+    default: .
+  mode:
+    description: scan reports findings; pr applies safe replacements and opens a pull request.
+    default: scan
+  fail-on:
+    description: Finding level that fails the action (deprecated, retired, or never).
+    default: deprecated
+  days:
+    description: Highlight shutdowns within this many days as critical.
+    default: '90'
+  config:
+    description: Optional ModelSunset JSON or YAML config path.
+    required: false
+  registry:
+    description: Optional custom registry JSON path.
+    required: false
+  github-token:
+    description: GitHub token used only when mode is pr.
+    required: false
+  base-branch:
+    description: Pull request base branch. Defaults to the repository default branch.
+    required: false
+  branch:
+    description: Migration branch name.
+    default: modelsunset/automated-migrations
+  draft:
+    description: Open migration pull requests as drafts.
+    default: 'true'
+  verify-command:
+    description: Optional command that must pass after replacements are applied.
+    required: false
+outputs:
+  findings:
+    description: Number of deprecated or retired model references found.
+  migrations:
+    description: Number of files changed in pr mode.
+  pr-url:
+    description: Created or updated pull request URL.
+  sarif-path:
+    description: Absolute path to the generated SARIF report.
+runs:
+  using: node20
+  main: dist/action/index.js

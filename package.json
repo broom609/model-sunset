@@ -1,0 +1,86 @@
+{
+  "name": "model-sunset",
+  "version": "1.0.0",
+  "description": "Find deprecated AI model IDs, test replacements, and open safe migration pull requests.",
+  "type": "module",
+  "bin": {
+    "modelsunset": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "registry",
+    "action.yml",
+    "modelsunset.schema.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:lib && npm run build:action",
+    "build:lib": "tsup src/cli.ts src/index.ts --format esm --dts --sourcemap --clean",
+    "build:action": "ncc build src/action.ts -o dist/action --minify --source-map --transpile-only",
+    "check": "npm run lint && npm run typecheck && npm run test:coverage && npm run build && npm run verify:dist",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "prepublishOnly": "npm run check"
+  },
+  "keywords": [
+    "ai",
+    "anthropic",
+    "deprecation",
+    "gemini",
+    "github-action",
+    "llm",
+    "migration",
+    "openai"
+  ],
+  "author": "Steven Broomall",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/broom609/model-sunset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/broom609/model-sunset/issues"
+  },
+  "homepage": "https://github.com/broom609/model-sunset#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "esbuild": "0.28.1",
+    "undici": "6.27.0"
+  },
+  "dependencies": {
+    "@actions/core": "3.0.1",
+    "@actions/exec": "3.0.0",
+    "@actions/github": "9.1.1",
+    "commander": "^14.0.2",
+    "fast-glob": "^3.3.3",
+    "picocolors": "^1.1.1",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@types/node": "^22.18.12",
+    "@vercel/ncc": "^0.38.4",
+    "@vitest/coverage-v8": "^4.0.4",
+    "eslint": "^9.38.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vitest": "^4.0.4"
+  }
+}

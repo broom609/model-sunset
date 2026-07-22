@@ -1,0 +1,36 @@
+name: Bug report
+description: Report incorrect scanner, migration, CLI, or action behavior.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include API keys, private source code, or sensitive fixtures.
+  - type: input
+    id: version
+    attributes:
+      label: ModelSunset version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options: [CLI scan, CLI fix, compare, GitHub Action scan, GitHub Action PR, registry]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include safe sample code, the command, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Node version, operating system, runner type
+    validations:
+      required: true

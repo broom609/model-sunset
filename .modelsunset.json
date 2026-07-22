@@ -1,0 +1,13 @@
+{
+  "$schema": "./modelsunset.schema.json",
+  "daysBeforeShutdown": 90,
+  "failOn": "deprecated",
+  "exclude": [
+    "CHANGELOG.md",
+    "README.md",
+    "examples/**",
+    "registry/**",
+    "scripts/verify-dist.mjs",
+    "test/**"
+  ]
+}

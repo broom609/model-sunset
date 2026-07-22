@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:coverage
+      - run: npm run build
+      - run: npm run verify:dist
+      - run: npm audit --audit-level=high
+
+  reproducible-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Verify committed action bundle
+        run: git diff --exit-code -- dist
+
+  action-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: modelsunset
+        uses: ./
+        with:
+          path: test/fixtures/sample-project
+          fail-on: never
+      - name: Verify action outputs
+        env:
+          FINDINGS: ${{ steps.modelsunset.outputs.findings }}
+          SARIF_PATH: ${{ steps.modelsunset.outputs.sarif-path }}
+        run: |
+          test "$FINDINGS" = "1"
+          test -s "$SARIF_PATH"
