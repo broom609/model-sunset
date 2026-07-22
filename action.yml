@@ -48,5 +48,5 @@ outputs:
   sarif-path:
     description: Absolute path to the generated SARIF report.
 runs:
-  using: node20
+  using: node24
   main: dist/action/index.js

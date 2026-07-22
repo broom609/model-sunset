@@ -182,7 +182,7 @@ program.command('init [path]').description('create config and GitHub workflow te
   );
   await writeFile(
     workflowPath,
-    `name: ModelSunset\non:\n  pull_request:\n  schedule:\n    - cron: '17 8 * * 1'\n  workflow_dispatch:\npermissions:\n  contents: read\njobs:\n  scan:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: broom609/model-sunset@v1\n`,
+    `name: ModelSunset\non:\n  pull_request:\n  schedule:\n    - cron: '17 8 * * 1'\n  workflow_dispatch:\npermissions:\n  contents: read\njobs:\n  scan:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v7\n      - uses: broom609/model-sunset@v1\n`,
     'utf8',
   );
   process.stdout.write(`Created ${configPath}\nCreated ${workflowPath}\n`);

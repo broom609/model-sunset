@@ -76,7 +76,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: broom609/model-sunset@v1
         with:
           fail-on: deprecated
@@ -86,7 +86,7 @@ jobs:
 The action writes `modelsunset.sarif`. To upload it to GitHub code scanning, add:
 
 ```yaml
-      - uses: github/codeql-action/upload-sarif@v3
+      - uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: modelsunset.sarif
@@ -112,7 +112,7 @@ jobs:
   migrate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - uses: broom609/model-sunset@v1
