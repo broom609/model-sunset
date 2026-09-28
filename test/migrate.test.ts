@@ -18,7 +18,7 @@ describe('safe migrations', () => {
     expect(dry).toMatchObject({ changedFiles: ['models.ts'], replacements: 2 });
     expect(await readFile(file, 'utf8')).toBe(original);
     await applyMigrations(report, false);
-    expect(await readFile(file, 'utf8')).toBe('export const models = ["gpt-5.5", "gpt-5.4-mini"];\n');
+    expect(await readFile(file, 'utf8')).toBe('export const models = ["gpt-5.6-sol", "gpt-5.6-terra"];\n');
   });
 
   it('reports models without a direct replacement', async () => {

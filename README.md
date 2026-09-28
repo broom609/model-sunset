@@ -13,10 +13,10 @@ $ npx model-sunset scan .
 
 STATE     MODEL                          REPLACEMENT          SHUTDOWN    LOCATION
 ────────  ─────────────────────────────  ───────────────────  ──────────  ─────────────────────
-RETIRED   gemini-embedding-001           gemini-embedding-2   2026-07-14  src/embeddings.ts:8:17
+RETIRED   text-embedding-004             gemini-embedding-2   2026-01-14  src/embeddings.ts:8:17
 CRITICAL  claude-opus-4-1-20250805       claude-opus-4-8      2026-08-05  api/agent.py:42:13
 
-2 reference(s) in 2 file(s). Registry: 2026-07-22.
+2 reference(s) in 2 file(s). Registry: 2026-09-28.
 ```
 
 ## Why ModelSunset

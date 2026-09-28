@@ -11,7 +11,7 @@ import {
   scanPath,
   shouldFail,
   tableReport
-} from "./chunk-TNBSS7Y4.js";
+} from "./chunk-WVCVJ2MY.js";
 
 // src/cli.ts
 import { existsSync, statSync } from "fs";

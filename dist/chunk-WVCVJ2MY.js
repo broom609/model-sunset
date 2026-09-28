@@ -393,7 +393,7 @@ import { isAbsolute as isAbsolute2, resolve as resolve2 } from "path";
 // registry/models.json
 var models_default = {
   schemaVersion: 1,
-  updatedAt: "2026-07-22",
+  updatedAt: "2026-09-28",
   providers: {
     openai: {
       name: "OpenAI",
@@ -415,57 +415,71 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "gpt-4o-mini-search-preview-2025-03-11",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "gpt-4o-search-preview-2025-03-11",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "gpt-5-chat-latest",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-5-codex",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-5.1-chat-latest",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-5.1-codex",
-      aliases: ["gpt-5.1-codex-max"],
+      aliases: ["gpt-5.1-codex-max", "gpt-5.2-codex"],
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-5.1-codex-mini",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
+    },
+    {
+      id: "gpt-audio-mini-2025-10-06",
+      provider: "openai",
+      deprecatedAt: "2026-04-22",
+      shutdownAt: "2026-07-23",
+      replacement: "gpt-audio-1.5"
+    },
+    {
+      id: "gpt-realtime-mini-2025-10-06",
+      provider: "openai",
+      deprecatedAt: "2026-04-22",
+      shutdownAt: "2026-07-23",
+      replacement: "gpt-realtime-2.1-mini"
     },
     {
       id: "o3-deep-research-2025-06-26",
@@ -473,7 +487,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.5-pro"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "o4-mini-deep-research-2025-06-26",
@@ -481,7 +495,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-07-23",
-      replacement: "gpt-5.5-pro"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-5.2-chat-latest",
@@ -489,7 +503,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-05-08",
       shutdownAt: "2026-08-10",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-image-1-mini",
@@ -497,7 +511,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-06-02",
       shutdownAt: "2026-12-01",
-      replacement: "gpt-image-2"
+      note: "Provider recommends gpt-image-2.5-sunburst or gpt-image-2.5-flare; choose one manually."
     },
     {
       id: "gpt-5-2025-08-07",
@@ -505,21 +519,21 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-06-11",
       shutdownAt: "2026-12-11",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-5-mini-2025-08-07",
       provider: "openai",
       deprecatedAt: "2026-06-11",
       shutdownAt: "2026-12-11",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "gpt-5-nano-2025-08-07",
       provider: "openai",
       deprecatedAt: "2026-06-11",
       shutdownAt: "2026-12-11",
-      replacement: "gpt-5.4-nano"
+      replacement: "gpt-5.6-luna"
     },
     {
       id: "gpt-5-pro-2025-10-06",
@@ -527,7 +541,8 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-06-11",
       shutdownAt: "2026-12-11",
-      replacement: "gpt-5.5-pro"
+      replacement: "gpt-5.6-sol",
+      note: "Use gpt-5.6-sol with reasoning.mode: pro."
     },
     {
       id: "gpt-realtime",
@@ -539,7 +554,7 @@ var models_default = {
     },
     {
       id: "gpt-audio",
-      aliases: ["gpt-4o-audio", "gpt-audio-mini"],
+      aliases: ["gpt-4o-audio", "gpt-audio-mini", "gpt-4o-mini-audio"],
       provider: "openai",
       deprecatedAt: "2026-07-20",
       shutdownAt: "2027-01-20",
@@ -554,12 +569,19 @@ var models_default = {
       replacement: "gpt-realtime-2.1-mini"
     },
     {
+      id: "gpt-4o-mini-transcribe-2025-03-20",
+      provider: "openai",
+      deprecatedAt: "2026-07-20",
+      shutdownAt: "2027-01-20",
+      replacement: "gpt-4o-mini-transcribe-2025-12-15"
+    },
+    {
       id: "gpt-3.5-turbo-0125",
       aliases: ["gpt-3.5-turbo", "gpt-3.5-turbo-completions"],
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "gpt-4-0613",
@@ -567,15 +589,15 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-4-turbo-2024-04-09",
-      aliases: ["gpt-4-turbo", "gpt-4-turbo-completions"],
+      aliases: ["gpt-4-turbo", "gpt-4-turbo-completions", "gpt-4-1106-preview"],
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-4.1-nano-2025-04-14",
@@ -583,21 +605,21 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.4-nano"
+      replacement: "gpt-5.6-luna"
     },
     {
       id: "gpt-4o-2024-05-13",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "gpt-image-1",
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-image-2"
+      note: "Provider recommends gpt-image-2.5-sunburst or gpt-image-2.5-flare; choose one manually."
     },
     {
       id: "o1-2024-12-17",
@@ -605,7 +627,16 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
+    },
+    {
+      id: "o1-pro-2025-03-19",
+      aliases: ["o1-pro"],
+      provider: "openai",
+      deprecatedAt: "2026-04-22",
+      shutdownAt: "2026-10-23",
+      replacement: "gpt-5.6-sol",
+      note: "Use gpt-5.6-sol with reasoning.mode: pro."
     },
     {
       id: "o3-mini-2025-01-31",
@@ -613,7 +644,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.5"
+      replacement: "gpt-5.6-sol"
     },
     {
       id: "o4-mini-2025-04-16",
@@ -621,7 +652,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2026-04-22",
       shutdownAt: "2026-10-23",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "gpt-3.5-turbo-instruct",
@@ -629,7 +660,7 @@ var models_default = {
       provider: "openai",
       deprecatedAt: "2025-09-26",
       shutdownAt: "2026-09-28",
-      replacement: "gpt-5.4-mini"
+      replacement: "gpt-5.6-terra"
     },
     {
       id: "sora-2",
@@ -640,11 +671,19 @@ var models_default = {
       note: "No direct replacement is listed by the provider."
     },
     {
-      id: "claude-mythos-preview",
-      provider: "anthropic",
-      deprecatedAt: "2026-07-01",
-      shutdownAt: "2026-07-21",
-      replacement: "claude-mythos-5"
+      id: "gpt-5.4-cyber",
+      provider: "openai",
+      deprecatedAt: "2026-09-11",
+      shutdownAt: "2026-10-01",
+      replacement: "gpt-5.6-cyber"
+    },
+    {
+      id: "whisper-1",
+      aliases: ["gpt-4o-transcribe", "gpt-4o-mini-transcribe", "gpt-4o-transcribe-diarize"],
+      provider: "openai",
+      deprecatedAt: "2026-08-26",
+      shutdownAt: "2027-02-26",
+      note: "Provider recommends gpt-live-transcribe or gpt-transcribe; choose one manually."
     },
     {
       id: "claude-opus-4-1-20250805",
@@ -750,20 +789,6 @@ var models_default = {
       replacement: "gemini-3.1-flash-lite"
     },
     {
-      id: "gemini-2.5-pro",
-      provider: "google",
-      shutdownAt: "2026-10-16",
-      replacement: "gemini-3.1-pro-preview",
-      note: "Google lists this as the earliest possible shutdown date."
-    },
-    {
-      id: "gemini-2.5-flash",
-      provider: "google",
-      shutdownAt: "2026-10-16",
-      replacement: "gemini-3.6-flash",
-      note: "Google lists this as the earliest possible shutdown date."
-    },
-    {
       id: "gemini-2.5-flash-image",
       provider: "google",
       shutdownAt: "2026-10-02",
@@ -771,11 +796,22 @@ var models_default = {
       note: "Google lists this as the earliest possible shutdown date."
     },
     {
-      id: "gemini-2.5-flash-lite",
+      id: "gemini-2.5-flash-lite-preview-09-2025",
       provider: "google",
-      shutdownAt: "2026-10-16",
-      replacement: "gemini-3.1-flash-lite",
-      note: "Google lists this as the earliest possible shutdown date."
+      shutdownAt: "2026-03-31",
+      replacement: "gemini-3.1-flash-lite"
+    },
+    {
+      id: "gemini-2.5-flash-preview-09-25",
+      provider: "google",
+      shutdownAt: "2026-02-17",
+      replacement: "gemini-3.6-flash"
+    },
+    {
+      id: "gemini-2.5-flash-image-preview",
+      provider: "google",
+      shutdownAt: "2026-01-15",
+      replacement: "gemini-2.5-flash-image"
     },
     {
       id: "gemini-2.0-flash",
@@ -794,7 +830,7 @@ var models_default = {
     {
       id: "gemini-embedding-001",
       provider: "google",
-      shutdownAt: "2026-07-14",
+      shutdownAt: "2028-05-14",
       replacement: "gemini-embedding-2"
     },
     {
@@ -828,10 +864,42 @@ var models_default = {
       replacement: "gemini-3.1-flash-image"
     },
     {
+      id: "imagen-4.0-generate-preview-06-06",
+      aliases: ["imagen-4.0-ultra-generate-preview-06-06"],
+      provider: "google",
+      shutdownAt: "2026-02-17",
+      replacement: "gemini-3.1-flash-image"
+    },
+    {
+      id: "veo-3.0-generate-001",
+      aliases: ["veo-2.0-generate-001"],
+      provider: "google",
+      shutdownAt: "2026-06-30",
+      replacement: "veo-3.1-generate-preview"
+    },
+    {
+      id: "veo-3.0-fast-generate-001",
+      provider: "google",
+      shutdownAt: "2026-06-30",
+      replacement: "veo-3.1-fast-generate-preview"
+    },
+    {
+      id: "gemini-omni-flash-preview",
+      provider: "google",
+      shutdownAt: "2026-09-30",
+      replacement: "gemini-omni-1.1-flash"
+    },
+    {
       id: "gemini-robotics-er-1.5-preview",
       provider: "google",
       shutdownAt: "2026-04-30",
       replacement: "gemini-robotics-er-1.6-preview"
+    },
+    {
+      id: "gemini-robotics-er-1.6-preview",
+      provider: "google",
+      shutdownAt: "2026-08-31",
+      replacement: "gemini-robotics-er-2-preview"
     }
   ]
 };
@@ -1042,4 +1110,4 @@ export {
   shouldFail,
   scanPath
 };
-//# sourceMappingURL=chunk-TNBSS7Y4.js.map
+//# sourceMappingURL=chunk-WVCVJ2MY.js.map
