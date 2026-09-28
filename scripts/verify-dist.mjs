@@ -28,11 +28,11 @@ if (report.findings?.length !== 1 || report.findings[0]?.matchedId !== 'gpt-4') 
 
 const fix = spawnSync(process.execPath, [cli, 'fix', project, '--yes', '--fail-on', 'never'], { encoding: 'utf8' });
 if (fix.status !== 0) throw new Error(`Built CLI fix failed: ${fix.stderr}`);
-if (!(await readFile(join(project, 'app.ts'), 'utf8')).includes('gpt-5.5')) {
+if (!(await readFile(join(project, 'app.ts'), 'utf8')).includes('gpt-5.6-sol')) {
   throw new Error('Built CLI did not apply the expected migration');
 }
 
 const check = spawnSync(process.execPath, [cli, 'check', 'gpt-4', '--at', '2026-07-22'], { encoding: 'utf8' });
-if (check.status !== 1 || !check.stdout.includes('gpt-5.5')) throw new Error('Built CLI check contract failed');
+if (check.status !== 1 || !check.stdout.includes('gpt-5.6-sol')) throw new Error('Built CLI check contract failed');
 
 process.stdout.write('Distribution verified: bundled action and CLI scan/fix/check contracts passed.\n');

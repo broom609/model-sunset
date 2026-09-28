@@ -11,7 +11,7 @@ describe('registry', () => {
     const registry = loadBundledRegistry();
     expect(registry.models.length).toBeGreaterThan(50);
     expect(Object.keys(registry.providers).sort()).toEqual(['anthropic', 'google', 'openai']);
-    expect(findModel(registry, 'gpt-4')?.replacement).toBe('gpt-5.5');
+    expect(findModel(registry, 'gpt-4')?.replacement).toBe('gpt-5.6-sol');
     expect(findModel(registry, 'claude-opus-4-1-20250805')?.replacement).toBe('claude-opus-4-8');
     expect(findModel(registry, 'gemini-embedding-001')?.replacement).toBe('gemini-embedding-2');
   });

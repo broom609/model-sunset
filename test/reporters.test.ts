@@ -20,7 +20,7 @@ const report: ScanReport = {
         id: 'gpt-4-0613',
         provider: 'openai',
         shutdownAt: '2026-10-23',
-        replacement: 'gpt-5.5',
+        replacement: 'gpt-5.6-sol',
         state: 'critical',
         daysUntilShutdown: 90,
       },

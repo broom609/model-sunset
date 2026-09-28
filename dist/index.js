@@ -15,7 +15,7 @@ import {
   shouldFail,
   tableReport,
   validateRegistry
-} from "./chunk-TNBSS7Y4.js";
+} from "./chunk-WVCVJ2MY.js";
 export {
   applyMigrations,
   compareModels,
