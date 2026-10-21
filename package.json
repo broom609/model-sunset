@@ -73,14 +73,14 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@types/node": "^22.18.12",
-    "@vercel/ncc": "^0.38.4",
-    "@vitest/coverage-v8": "^4.0.4",
-    "eslint": "^9.38.0",
-    "tsup": "^8.5.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2",
-    "vitest": "^4.0.4"
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "@vercel/ncc": "^0.45.0",
+    "@vitest/coverage-v8": "^5.0.5",
+    "eslint": "^10.13.0",
+    "tsup": "^9.0.0",
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.5"
   }
 }
